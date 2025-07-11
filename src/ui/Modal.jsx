@@ -1,9 +1,9 @@
 /* eslint-disable react/prop-types */
 import styled from "styled-components";
-import CreateCabinForm from "../features/cabins/CreateCabinForm";
-import { HiXMark } from "react-icons/hi2";
 import { createPortal } from "react-dom";
 import { cloneElement, createContext, useContext, useState } from "react";
+import { useOutsideClick } from "../hooks/useOutsideClick";
+import { HiXMark } from "react-icons/hi2";
 
 const StyledModal = styled.div`
   position: fixed;
@@ -68,17 +68,19 @@ function Modal({children}){
 
 function Open({children ,opens}){
 const {open}=useContext(ModalContext);
+
 return cloneElement(children,{onClick:()=>open(opens)})
 
 }
 
 function Window({name,children}) {
   const {close,openName}=useContext(ModalContext);
+ const ref=useOutsideClick(close)
   if(name!==openName)return null;
 
   return createPortal(
     <Overlay>
-    <StyledModal>
+    <StyledModal ref={ref}>
     <Button onClick={close}><HiXMark/></Button>
 <div>{cloneElement(children,{onClose:close})}</div>
     </StyledModal>

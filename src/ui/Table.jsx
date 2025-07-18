@@ -87,7 +87,7 @@ function Row({ children }) {
 function Body({data,render}) {
     if(!data.length)return <Empty>No data</Empty>
   return <StyledBody role="tbody">
-    {data.map(render)}
+    {data?.map(render)}
   </StyledBody>;
 }
 

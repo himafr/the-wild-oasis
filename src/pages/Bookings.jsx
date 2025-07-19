@@ -1,7 +1,7 @@
 import Heading from "../ui/Heading";
 import Row from "../ui/Row";
 import BookingTable from "../features/bookings/BookingTable";
-import CabinTableOperations from "../ui/CabinTableOperations";
+import BookingTableOperations from "../features/bookings/BookingTableOperations";
 
 function Bookings() {
   return (
@@ -9,7 +9,7 @@ function Bookings() {
 
     <Row type="horizontal">
       <Heading as="h1">All bookings</Heading>
-     <CabinTableOperations />
+     <BookingTableOperations />
     </Row>
   <BookingTable/>
     </>

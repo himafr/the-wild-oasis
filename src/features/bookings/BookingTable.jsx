@@ -3,8 +3,8 @@ import Table from "../../ui/Table";
 import Menus from "../../ui/Menus";
 import Empty from "../../ui/Empty";
 import Spinner from "../../ui/Spinner";
-import { useBookings } from "./useBooking";
 import Pagination from "../../ui/Pagination";
+import { useBookings } from "./useBookings";
 
 function BookingTable() {
 const {bookings,error,isLoading,count}=useBookings()

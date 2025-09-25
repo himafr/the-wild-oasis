@@ -1,4 +1,3 @@
-import { ca } from "date-fns/locale";
 import supabase, { supabaseUrl } from "./supabase";
 
 export async function getCabins(){
@@ -20,7 +19,6 @@ export async function createUpdateCabin(cabinData,id) {
 
   const imagePath=hasImagePath?cabinData.image:`${supabaseUrl}/storage/v1/object/public/cabin-images/${imageName}`
 
-  console.log("imagePath",imagePath,hasImagePath,cabinData,supabaseUrl)
 let query=supabase.from('cabins')
 
 //1 create cabin

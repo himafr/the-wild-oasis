@@ -12,6 +12,5 @@ export function useDeleteBooking() {
     },
     onError: (err) => toast.error(err.message),
   });
-  console.log(error)
-  return { deleteBooking, isPending };
+  return { deleteBooking, isPending,error };
 }

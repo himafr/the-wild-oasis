@@ -4,7 +4,7 @@ import DashboardBox from "./DashboardBox";
 import Heading from "../../ui/Heading"
 import { Area, AreaChart, CartesianGrid, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts";
 import {useDarkMode}  from "../../context/darkModeContext"
-import { eachDayOfInterval, format, isSameDay, subDays } from "date-fns";
+import { eachDayOfInterval, format, formatDate, isSameDay, subDays } from "date-fns";
 const StyledSalesChart = styled(DashboardBox)`
   grid-column: 1 / -1;
 
@@ -75,7 +75,7 @@ const data=allDates.map(date=>{return{
       };
   return (
    <StyledSalesChart>
-    <Heading as="h2">Sales (last 30 days)</Heading>
+    <Heading as="h2">Sales from {format(allDates.at(0),"dd MMM yyy")} &mdash; {format(allDates.at(-1),"dd MMM yyy")} </Heading>
     <ResponsiveContainer height={300} width="100%">
 
     <AreaChart data={data} >

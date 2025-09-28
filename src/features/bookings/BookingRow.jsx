@@ -126,7 +126,6 @@ function BookingRow({
         </Menus.Menu>
         <Modal.Window name="delete">
           <ConfirmDelete resourceName={"booking"} onConfirm={ ()=>{
-            console.log(bookingId)
             deleteBooking(bookingId) }}/>
         </Modal.Window>
       </Modal>

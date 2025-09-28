@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import styled from "styled-components";
 
 const StyledCheckbox = styled.div`
@@ -25,7 +26,7 @@ const StyledCheckbox = styled.div`
   }
 `;
 
-function Checkbox({ checked, onChange, disabled = false, id, children }) {
+function CheckBox({ checked, onChange, disabled = false, id, children }) {
   return (
     <StyledCheckbox>
       <input
@@ -40,4 +41,4 @@ function Checkbox({ checked, onChange, disabled = false, id, children }) {
   );
 }
 
-export default Checkbox;
+export default CheckBox;

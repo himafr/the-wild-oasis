@@ -1,8 +1,0 @@
-{
-  "cron": {
-    "refresh-bookings": {
-      "path": "/api/refresh",
-       "schedule": "* * * * *"
-    }
-}
-}

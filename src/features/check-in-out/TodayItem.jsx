@@ -31,8 +31,8 @@ function TodayItem({activity}) {
     <StyledTodayItem>
       {status === "unconfirmed" &&<Tag type="green">Arriving </Tag>}
       {status === "checked-in" &&<Tag type="blue">Departing </Tag>}
-      <Flag src={guests.countryFlag}  alt={`flag of ${guests.country}`}/>
-      <Guest>{guests.fullName}</Guest>
+      <Flag src={guests?.countryFlag}  alt={`flag of ${guests?.country}`}/>
+      <Guest>{guests?.fullName}</Guest>
       <div>{numNights} nights</div>
       {status === "unconfirmed" &&<Button size="small" variation="primary" as={Link} to={`/checkin/${id}`}>Check in</Button>}
       {status === "checked-in" &&<CheckoutButton bookingId={id} />}

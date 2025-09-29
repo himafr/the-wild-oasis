@@ -15,6 +15,8 @@ import { guests } from "./data-guests";
 //   breakfastPrice: 15,
 // };
 
+console.log("uploader is working")
+
 async function deleteGuests() {
   const { error } = await supabase.from("guests").delete().gt("id", 0);
   if (error) console.log(error.message);

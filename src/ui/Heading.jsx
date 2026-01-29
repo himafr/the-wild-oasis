@@ -20,5 +20,6 @@ font-weight: 600;
 text-align: center;
 `}
 line-height:1.4rem;
+margin-bottom:2rem;
 `
 export default Heading;
